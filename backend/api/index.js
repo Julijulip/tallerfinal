@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("Mongo conectado"))
   .catch(err => console.log(err));
 
-app.use("/api/auth", require("./routes/auth"));
+app.use("/api/auth", require("../routes/auth"));
 
 app.get("/", (req, res) => {
   res.json({ message: "API funcionando 🚀" });
