@@ -14,20 +14,26 @@ export default function Auth() {
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
-    console.log(data); // 🔥 DEBUG (verifica que sí se envían datos)
+    console.log(data);
 
     try {
       if (isLogin) {
-        const res = await axios.post("http://localhost:5000/api/auth/login", data);
+        const res = await axios.post(
+          "https://tallerfinal-5ryy.onrender.com/api/auth/login",
+          data
+        );
         localStorage.setItem("user", JSON.stringify(res.data));
         navigate("/");
       } else {
-        await axios.post("http://localhost:5000/api/auth/register", data);
+        await axios.post(
+          "https://tallerfinal-5ryy.onrender.com/api/auth/register",
+          data
+        );
         alert("Registrado correctamente");
         setIsLogin(true);
       }
     } catch (err) {
-      console.log(err); // 🔥 para ver el error real
+      console.log(err);
       alert("Error al registrar o iniciar sesión");
     }
   };
