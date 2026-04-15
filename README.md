@@ -96,7 +96,6 @@ Mongoose
 🔐 Seguridad implementada
 Validación de campos en formularios
 Protección de rutas con ProtectedRoute
-Manejo de sesión con localStorage
 Restricción de acceso a rutas privadas
 👩‍💻 Autor
 
